@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'pixeledregular';
+    src: url('assets/fonts/Pixeled.ttf');
+    src: url('assets/fonts/pixeled-webfont.woff2') format('woff2'),
+         url('assets/fonts/pixeled-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    font-family: 'pixeledregular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
