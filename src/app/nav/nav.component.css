@@ -11,16 +11,16 @@
 }
 
 .options {
-    margin-top: 10px;
-    background-color: black;
+    margin-top: 2px;
+    background: transparent;
 }
 
 button {
-    background-color: black;
+    font-size: 2em;
+    background-color: transparent;
     border: none;
 }
 
 .options:hover {
-    color: red;
-
+    color: #c53737;
 }

@@ -1,25 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-    font-family: 'pixeledregular';
-    src: url('assets/fonts/Pixeled.ttf');
-    src: url('assets/fonts/pixeled-webfont.woff2') format('woff2'),
-         url('assets/fonts/pixeled-webfont.woff') format('woff');
+    font-family: 'munro';
+    src: url('assets/fonts/munro.ttf');
+    src: url('assets/fonts/munro-webfont.woff2') format('woff2'),
+         url('assets/fonts/munro-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 * {
-    font-family: 'pixeledregular', Arial, sans-serif;
+    font-family: 'munro', Arial, sans-serif;
     font-weight:normal;
     font-style:normal;
 }
 
-h1, h3 {
+h1 {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    margin-left: 16px;
+    text-shadow: 0px 2px #c53737;
+}
+
+h3 {
+    font-size: 3em;
     color: white;
     text-align: center;
     margin-left: 16px;
+    text-shadow: 0px 2px #c53737;
+}
+
+h5 {
+    font-size: 2em;
+    color: white;
+    text-align: left;
+    margin-left: 16px;
+}
+
+li{ 
+    font-size: 1.5em;
 }
 
 body {
@@ -28,8 +49,8 @@ body {
 
 html {
     height: 100%;
-    background: black;
-    overflow: hidden;
+    background: rgb(0, 0, 0);
+    overflow: auto;
   }
   
   #stars {
