@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResourceService } from '../services/resources.service';
+import { Resources } from '../shared/resource.model';
 
 @Component({
   selector: 'app-resources',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resources.component.css']
 })
 export class ResourcesComponent implements OnInit {
-
-  constructor() { }
+  resources: Resources[];
+  constructor(
+    private _resourceService: ResourceService
+  ) { }
 
   ngOnInit() {
+    this.resources = this._resourceService.getResources();
   }
 
 }

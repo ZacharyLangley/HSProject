@@ -2,34 +2,24 @@
   <h1>RESOURCES</h1>
   <app-nav></app-nav>
 
-  <!-- 
-    Slack Channels 
-      * IEEECS        : UNTIEEECS.slack.com
-      * CyberSecurity : UNTCCSI.slack.com
-      * Use the #resources link
-  -->
-
-  <!-- 
-    Websites (Books) 
-      * Amazon        : https://www.amazon.com/s/ref=lp_283155_nr_n_7?fst=as%3Aoff&rh=n%3A283155%2Cn%3A%211000%2Cn%3A5&bbn=1000&ie=UTF8&qid=1515448694&rnid=1000
-      * HumbleBundle  : https://www.humblebundle.com/
-      * PacktPub      : https://www.packtpub.com/
-      * GitHub        : https://github.com/EbookFoundation/free-programming-books
-      * Reddit        : https://www.reddit.com/r/learnprogramming/
-  -->
-
-  <!-- 
-    Websites (Video) 
-      * UNT           : https://www.it.unt.edu/lynda
-      * Lynda         : https://www.Lynda.com
-      * Udemy         : https://www.Udemy.com
-      * Coursera      : https://www.Coursera.com
-      * PluralSight   : https://www.pluralsight.com/
-  -->
-
-  <!-- 
-    Other
-      * FreeCodeCamp  : https://www.freecodecamp.org/
-      * CodeAcademy   : https://www.codecademy.com/
-   -->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resource of resources">
+        <th scope="row">{{ resource.id }}</th>
+        <td>{{ resource.type }}</td>
+        <td>{{ resource.name }}</td>
+        <td>{{ resource.url }}</td>
+        <td>{{ resource.comments }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
