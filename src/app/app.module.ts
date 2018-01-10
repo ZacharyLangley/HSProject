@@ -16,7 +16,17 @@ import { CompetitorService } from './services/competitors.service';
 import { ResourceService } from './services/resources.service';
 import { appRoutes } from './app.routes';
 import { ResourceListComponent } from './resource-list/resource-list.component';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
 
+export const firebaseConfig = {
+  apiKey: 'AIzaSyBdRV8q9CQ3vDJQ0VBvxhjKPZPUz9CYMNc',
+  authDomain: 'highscoresproject.firebaseapp.com',
+  databaseURL: 'https://highscoresproject.firebaseio.com',
+  projectId: 'highscoresproject',
+  storageBucket: '',
+  messagingSenderId: '110548734177',
+};
 
 @NgModule({
   declarations: [
@@ -34,6 +44,8 @@ import { ResourceListComponent } from './resource-list/resource-list.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   providers: [ResourceService, CompetitorService],
   bootstrap: [AppComponent]

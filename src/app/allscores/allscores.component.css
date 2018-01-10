@@ -8,15 +8,19 @@ thead {
 tbody {
     color: white;
     padding-top: 10px;
+    text-align: center;
 }
 
 th {
     font-size: 20px;
+    text-align: center;
 }
 
 td {
     font-size: 15px;
+    text-align: center;
 }
 .score {
-    color: green
+    color: green;
+    font-size: 20px;
 }
