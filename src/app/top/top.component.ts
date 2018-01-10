@@ -21,9 +21,18 @@ export class TopComponent implements OnInit {
   }
 
   private topSort() {
-    // DEBUG
-    // TODO: Make a top 10 sort function
-    this.topCompetitors = this._competitorService.getCompetitors().slice(0, 10);
+    this.competitors = this.competitors.sort((n1, n2) => {
+      if (n1.score > n2.score) {
+        return 1;
+      }
+      if (n1.score < n2.score) {
+        return -1;
+      }
+
+      return 0;
+    });
+    this.competitors.reverse();
+    this.topCompetitors = this.competitors.slice(0, 10);
   }
 
 }
