@@ -11,7 +11,7 @@ export class ResourceService {
     return SAVED_RESOURCES.slice(0);
   }
 
-  getTotalResources(allActivities: Resources[]){
+  getTotalResources(allActivities: Resources[]) {
     return allActivities.length;
   }
 }

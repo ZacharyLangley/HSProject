@@ -13,7 +13,7 @@ export const SAVED_RESOURCES: Resources[] = [
     'type': 'BOOK',
     'name': 'GitHub',
     'url': 'https://github.com/EbookFoundation/free-programming-books',
-    'comments' : '',
+    'comments' : '95% of the Links still work, just prep for disapointment',
   },
   {
     'id' : 3,
@@ -48,7 +48,7 @@ export const SAVED_RESOURCES: Resources[] = [
     'type': 'VIDEO',
     'name': 'Lynda',
     'url': 'https://www.Lynda.com',
-    'comments' : '',
+    'comments' : 'Classes can be a bit dry, but otherwise enlightening',
   },
   {
     'id' : 8,
@@ -62,7 +62,7 @@ export const SAVED_RESOURCES: Resources[] = [
     'type': 'VIDEO',
     'name': 'Coursera',
     'url': 'https://www.Coursera.com',
-    'comments' : '',
+    'comments' : 'Most of the Instruction if in a Class-type Format',
   },
   {
     'id' : 10,
@@ -83,7 +83,7 @@ export const SAVED_RESOURCES: Resources[] = [
     'type': 'CAMP',
     'name': 'CodeAcademy',
     'url': 'https://www.codecademy.com/',
-    'comments' : '',
+    'comments' : 'Solid Introductory Material, great if your a bit scared',
   },
   {
     'id' : 13,

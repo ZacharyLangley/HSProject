@@ -16,5 +16,4 @@ export class ResourcesComponent implements OnInit {
   ngOnInit() {
     this.resources = this._resourceService.getResources();
   }
-
 }

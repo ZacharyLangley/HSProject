@@ -12,9 +12,11 @@ import { AllscoresComponent } from './allscores/allscores.component';
 import { TopComponent } from './top/top.component';
 import { NavComponent } from './nav/nav.component';
 
+import { CompetitorService } from './services/competitors.service';
 import { ResourceService } from './services/resources.service';
 import { appRoutes } from './app.routes';
 import { ResourceListComponent } from './resource-list/resource-list.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { ResourceListComponent } from './resource-list/resource-list.component';
     HttpModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [ResourceService],
+  providers: [ResourceService, CompetitorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

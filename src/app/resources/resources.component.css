@@ -1,0 +1,13 @@
+table {
+    color: white;
+}
+thead {
+    
+    font-size: 18px;
+}
+tbody {
+    font-size: 16px;
+}
+.tableRows:hover{ 
+    color: black;
+}

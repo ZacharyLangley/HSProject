@@ -1,0 +1,22 @@
+.borderless td, .borderless th {
+    border: none;
+}
+thead {
+    color: white;
+    text-align: center;
+}
+tbody {
+    color: white;
+    padding-top: 10px;
+}
+
+th {
+    font-size: 30px;
+}
+
+td {
+    font-size: 25px;
+}
+.score {
+    color: green
+}

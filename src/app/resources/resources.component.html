@@ -13,11 +13,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let resource of resources">
+      <tr *ngFor="let resource of resources" class="tableRows">
         <th scope="row">{{ resource.id }}</th>
         <td>{{ resource.type }}</td>
         <td>{{ resource.name }}</td>
-        <td>{{ resource.url }}</td>
+        <td><a href="{{resource.url}}" target="_blank">{{ resource.url }}</a></td>
         <td>{{ resource.comments }}</td>
       </tr>
     </tbody>
