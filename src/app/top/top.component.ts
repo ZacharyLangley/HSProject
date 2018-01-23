@@ -16,7 +16,10 @@ export class TopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.competitors = this.competitorSvc.getCompetitorsList({ limitToLast: 10 });
+    this.competitors = this.competitorSvc.getCompetitorsList({ 
+      orderByChild: 'score',
+      limitToLast: 10
+    });
   }
 
 }

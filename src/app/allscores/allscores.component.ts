@@ -17,7 +17,8 @@ export class AllscoresComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.competitors = this.competitorSvc.getCompetitorsList({ });
-  }
+    this.competitors = this.competitorSvc.getCompetitorsList({ 
+      orderByChild: 'score',
+    });  }
 
 }
