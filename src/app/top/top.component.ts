@@ -16,7 +16,7 @@ export class TopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.competitors = this.competitorSvc.getCompetitorsList({ });
+    this.competitors = this.competitorSvc.getCompetitorsList({ limitToLast: 10 });
   }
 
 }
