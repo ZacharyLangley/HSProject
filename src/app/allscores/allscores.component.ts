@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CompetitorService } from '../services/competitors.service';
-import { Competitors } from '../shared/competitor.model';
+import { FirebaseListObservable } from 'angularfire2/database-deprecated';
+import { Competitor } from '../modals/competitors.modal';
 
 @Component({
   selector: 'app-allscores',
@@ -8,28 +9,15 @@ import { Competitors } from '../shared/competitor.model';
   styleUrls: ['./allscores.component.css']
 })
 export class AllscoresComponent implements OnInit {
-  competitors: Competitors[];
+
+  public competitors: FirebaseListObservable<Competitor[]>;
+
   constructor(
-    private _competitorService: CompetitorService,
+    private competitorSvc: CompetitorService
   ) { }
 
   ngOnInit() {
-    this.competitors = this._competitorService.getCompetitors();
-    this.topSort();
-  }
-
-  private topSort() {
-    this.competitors = this.competitors.sort((n1, n2) => {
-      if (n1.score > n2.score) {
-        return 1;
-      }
-      if (n1.score < n2.score) {
-        return -1;
-      }
-
-      return 0;
-    });
-    this.competitors.reverse();
+    this.competitors = this.competitorSvc.getCompetitorsList({ });
   }
 
 }

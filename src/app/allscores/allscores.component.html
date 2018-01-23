@@ -5,15 +5,13 @@
     <thead>
       <tr>
         <th scope="col">Handle</th>
-        <th scope="col">Name</th>
         <th scope="col">Major</th>
         <th scope="col">Score</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let competitor of competitors">
+      <tr *ngFor="let competitor of competitors | async">
         <th scope="row">{{ competitor.handle }}</th>
-        <td>{{ competitor.name }}</td>
         <td>{{ competitor.major }}</td>
         <td class="score">{{ competitor.score }}</td>
       </tr>

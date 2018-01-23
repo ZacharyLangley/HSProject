@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Competitors } from '../shared/competitor.model';
-import { SAVED_COMPETITORS } from '../shared/competitors';
+import { FirebaseListObservable, FirebaseObjectObservable, AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { Competitor } from '../modals/competitors.modal';
 
 @Injectable()
 export class CompetitorService {
-    constructor() {
 
+    private basePath = '/Competitors';
+    competitors: FirebaseListObservable<Competitor[]> = null;
+
+    constructor(
+        private database: AngularFireDatabase
+    ) { }
+    getCompetitorsList(query={}): FirebaseListObservable<Competitor[]> {
+        this.competitors = this.database.list(this.basePath, {
+            query: query
+        });
+        console.log(this.competitors);
+        return this.competitors;
     }
-
-    getCompetitors(): Competitors[] {
-        return SAVED_COMPETITORS.slice(0);
-    }
-
-    getTopTen(allCompetitors: Competitors[]) {
-
+    private handleError(error) {
+        console.log(error);
     }
 }

@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
@@ -20,15 +20,10 @@ import { CompetitorService } from './services/competitors.service';
 import { ResourceService } from './services/resources.service';
 import { appRoutes } from './app.routes';
 import { ResourceListComponent } from './resource-list/resource-list.component';
+import { CompetitorDetailComponent } from './competitor-detail/competitor-detail.component';
+import { environment } from '../environments/environment';
 
-export const firebaseConfig = {
-  apiKey: 'AIzaSyBdRV8q9CQ3vDJQ0VBvxhjKPZPUz9CYMNc',
-  authDomain: 'highscoresproject.firebaseapp.com',
-  databaseURL: 'https://highscoresproject.firebaseio.com',
-  projectId: 'highscoresproject',
-  storageBucket: '',
-  messagingSenderId: '110548734177',
-};
+export const firebaseConfig = environment.firebaseConfig;
 
 @NgModule({
   declarations: [
@@ -40,7 +35,8 @@ export const firebaseConfig = {
     TopComponent,
     NavComponent,
     ResourceListComponent,
-    FooterComponent
+    FooterComponent,
+    CompetitorDetailComponent
   ],
   imports: [
     BrowserModule,
