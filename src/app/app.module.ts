@@ -19,7 +19,6 @@ import { FooterComponent } from './footer/footer.component';
 import { CompetitorService } from './services/competitors.service';
 import { ResourceService } from './services/resources.service';
 import { appRoutes } from './app.routes';
-import { ResourceListComponent } from './resource-list/resource-list.component';
 import { CompetitorDetailComponent } from './competitor-detail/competitor-detail.component';
 import { environment } from '../environments/environment';
 
@@ -34,7 +33,6 @@ export const firebaseConfig = environment.firebaseConfig;
     AllscoresComponent,
     TopComponent,
     NavComponent,
-    ResourceListComponent,
     FooterComponent,
     CompetitorDetailComponent
   ],

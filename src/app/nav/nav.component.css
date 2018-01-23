@@ -1,13 +1,13 @@
+div {
+    width: auto !important;
+}
 .row-centered {
     text-align:center;
 }
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align: center;
-    /* inline-block space fix */
-    /*text-align: center;*/
 }
 
 .options {
