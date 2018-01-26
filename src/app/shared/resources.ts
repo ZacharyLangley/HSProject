@@ -5,7 +5,7 @@ export const SAVED_RESOURCES: Resources[] = [
     'id' : 1,
     'type': 'BOOK',
     'name': 'Packt Pub',
-    'url': 'https://www.packtpub.com/',
+    'url': 'https://www.packtpub.com/packt/offers/free-learning',
     'comments' : 'Free Book-A-Day',
   },
   {

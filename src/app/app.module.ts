@@ -21,6 +21,7 @@ import { ResourceService } from './services/resources.service';
 import { appRoutes } from './app.routes';
 import { CompetitorDetailComponent } from './competitor-detail/competitor-detail.component';
 import { environment } from '../environments/environment';
+import { InfoComponent } from './info/info.component';
 
 export const firebaseConfig = environment.firebaseConfig;
 
@@ -34,7 +35,8 @@ export const firebaseConfig = environment.firebaseConfig;
     TopComponent,
     NavComponent,
     FooterComponent,
-    CompetitorDetailComponent
+    CompetitorDetailComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
