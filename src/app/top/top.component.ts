@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompetitorService } from '../services/competitors.service';
+
 import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { Competitor } from '../modals/competitors.modal';
 
@@ -16,7 +17,7 @@ export class TopComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.competitors = this.competitorSvc.getCompetitorsList({ 
+    this.competitors = this.competitorSvc.getCompetitorsList({
       orderByChild: 'score',
       limitToLast: 10
     });
